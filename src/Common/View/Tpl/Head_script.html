@@ -1,0 +1,5 @@
+<script>
+    var _global = <?php if(isset($_js_var)) { echo json_encode($_js_var).";"; } else { echo "{};"; } ?>
+    function _cdnFallback(){};
+</script>
+<script src="<?php echo URL::site('js/vendor/modernizr-2.8.3.min.js', 'static'); ?>"></script>
