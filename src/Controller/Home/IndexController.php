@@ -3,7 +3,7 @@
 namespace Com\Youzan\ZanPhpIo\Controller\Home;
 
 
-use Zan\Framework\Foundation\Domain\HttpController as Controller;
+use Com\Youzan\ZanPhpIo\Controller\Base\BaseController as Controller;
 
 class IndexController extends Controller
 {
