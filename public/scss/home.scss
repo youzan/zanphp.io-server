@@ -1,186 +1,187 @@
 @import "variables";
 @import "mixins";
+
 .hd {
-    padding-top: 2rem;
-    margin-bottom: 1.75rem;
+  padding-top: 2rem;
+  margin-bottom: 1.75rem;
 }
 
 .main-nav {
-    ul {
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        &> li {
-            display: inline-block;
-            margin: 0 15px;
-            list-style: none;
-            a {
-                color: $gray-light;
-                text-decoration: none;
-                transition: color .2s linear;
-                &:hover {
-                    color: $link-color;
-                }
-            }
+  ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    & > li {
+      display: inline-block;
+      margin: 0 15px;
+      list-style: none;
+      a {
+        color: $gray-light;
+        text-decoration: none;
+        transition: color .2s linear;
+        &:hover {
+          color: $link-color;
         }
+      }
     }
+  }
 }
 
 .section-title {
-    font-size: $font-size-h3;
-    font-weight: normal;
-    margin-bottom: 1rem;
-    line-height: $font-size-h3;
+  font-size: $font-size-h3;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  line-height: $font-size-h3;
 }
 
 .section-content {
-    font-size: $font-size-base;
-    font-weight: normal;
-    line-height: 2rem;
-    color: $gray-light;
+  font-size: $font-size-base;
+  font-weight: normal;
+  line-height: 2rem;
+  color: $gray-light;
 }
 
 .intro {
+  text-align: center;
+  padding-bottom: 40px;
+  h1.logo {
+    font-size: 0;
+    margin: 0 auto;
     text-align: center;
-    padding-bottom: 40px;
-    h1.logo {
-        font-size: 0;
-        margin: 0 auto;
-        text-align: center;
-        &> a {
-            display: inline-block;
-            width: 18.75rem;
-            height: 18.75rem;
-        }
-        svg {
-            width: 100%;
-            height: 100%;
-        }
+    & > a {
+      display: inline-block;
+      width: 18.75rem;
+      height: 18.75rem;
     }
-    h2 {
-        font-size: $font-size-h2;
-        line-height: 1;
-        letter-spacing: -1.24px;
-        font-family: -apple-system-headline2, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        font-weight: normal;
-        margin-top: 0;
-        margin-bottom: 0.875rem;
+    svg {
+      width: 100%;
+      height: 100%;
     }
-    .desc {
-        font-family: -apple-system-subheadline1, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        font-weight: normal;
-        font-size: $font-size-base;
-        margin: 0 0 2.5rem;
-        line-height: 1.375rem;
-        color: $gray;
+  }
+  h2 {
+    font-size: $font-size-h2;
+    line-height: 1;
+    letter-spacing: -1.24px;
+    font-family: -apple-system-headline2, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0.875rem;
+  }
+  .desc {
+    font-family: -apple-system-subheadline1, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: normal;
+    font-size: $font-size-base;
+    margin: 0 0 2.5rem;
+    line-height: 1.375rem;
+    color: $gray;
+  }
+  .btn {
+    border-radius: 100rem;
+    transition: background-color .1s linear;
+    &.btn-primary {
+      padding: 0.75rem 2rem;
+      font-size: $font-size-sm;
+      line-height: $font-size-sm;
     }
-    .btn {
-        border-radius: 100rem;
-        transition: background-color .1s linear;
-        &.btn-primary {
-            padding: 0.75rem 2rem;
-            font-size: $font-size-sm;
-            line-height: $font-size-sm;
-        }
-        &.btn-secondary {
-            font-size: 0;
-            padding: 0.625rem;
-            line-height: $font-size-sm;
-            font-size: $font-size-sm;
-            svg,
-            span {
-                vertical-align: middle;
-            }
-        }
+    &.btn-secondary {
+      font-size: 0;
+      padding: 0.625rem;
+      line-height: $font-size-sm;
+      font-size: $font-size-sm;
+      svg,
+      span {
+        vertical-align: middle;
+      }
     }
-    .btn + .btn {
-        margin-left: 0.5rem;
-    }
+  }
+  .btn + .btn {
+    margin-left: 0.5rem;
+  }
 }
 
 .endorse,
 .features,
 .about-youzan {
-    padding-top: 46px;
-    padding-bottom: 40px;
-    text-align: center;
+  padding-top: 46px;
+  padding-bottom: 40px;
+  text-align: center;
 }
 
 .endorse,
 .about-youzan {
-    background-color: $gray-lightest;
+  background-color: $gray-lightest;
 }
 
 .endorse {
-    padding-bottom: 0;
-    .desc {
-        font-family: -apple-system-subheadline1, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        font-weight: normal;
-        font-size: $font-size-base;
-        margin: 0 0 2.5rem;
-        line-height: 1.375rem;
-        color: $gray-light;
-    }
-    figure {
-        margin: 0 30px;
-        text-align: center;
-    }
-    img {
-        width: auto;
-        height: auto;
-        max-width: 100%;
-        max-height: 100%;
-    }
+  padding-bottom: 0;
+  .desc {
+    font-family: -apple-system-subheadline1, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: normal;
+    font-size: $font-size-base;
+    margin: 0 0 2.5rem;
+    line-height: 1.375rem;
+    color: $gray-light;
+  }
+  figure {
+    margin: 0 30px;
+    text-align: center;
+  }
+  img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
 }
 
 .features {
-    .section-title {
-        margin-bottom: 1.25rem;
+  .section-title {
+    margin-bottom: 1.25rem;
+  }
+  .section-content {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 580px;
+    padding: 0 1rem;
+    & > ul {
+      line-height: 2rem;
     }
-    .section-content {
-        text-align: left;
-        margin: 0 auto;
-        max-width: 580px;
-        padding: 0 1rem;
-        &> ul {
-            line-height: 2rem;
-        }
-    }
+  }
 }
 
 .about-youzan {
-    .section-title {
-        margin-bottom: 1.25rem;
-    }
-    .section-content {
-        text-align: justify;
-        margin: 0 auto;
-        padding: 0 1rem;
-        max-width: 560px;
-    }
+  .section-title {
+    margin-bottom: 1.25rem;
+  }
+  .section-content {
+    text-align: justify;
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: 560px;
+  }
 }
 
 .intro .logo {
-    #php {
-        transform: scale(0.0001);
-    }
-    .line {
-        animation: .4s line ease forwards;
-        transform-origin: center center;
-        opacity: 0;
-    }
-    .line:nth-child(2n) {
-        animation: .5s line ease .2s forwards;
-    }
+  #php {
+    transform: scale(0.0001);
+  }
+  .line {
+    animation: .4s line ease forwards;
+    transform-origin: center center;
+    opacity: 0;
+  }
+  .line:nth-child(2n) {
+    animation: .5s line ease .2s forwards;
+  }
 }
 
 @keyframes line {
-    0% {
-        transform: scale(.5, 1);
-        opacity: 0;
-    }
-    100% {
-        transform: scale(1, 1);
-        opacity: 1;
-    }
+  0% {
+    transform: scale(.5, 1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
 }
