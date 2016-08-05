@@ -1,0 +1,12 @@
+<?php if (isset($pic) && is_array($pic)): ?>
+    <?php if (sizeof($pic) > 1): ?>
+    <img src="<?php echo URL::site($pic[0], 'img');?>"
+        srcset="<?php echo URL::site($pic[0], 'img');?> 1x, <?php echo URL::site($pic[1], 'img');?> 2x, <?php echo URL::site($pic[0], 'img');?>"
+        alt="<?php if (isset($alt)) { echo $alt; } ?>"
+    />
+    <?php else: ?>
+    <img src="<?php echo URL::site($pic[0], 'img');?>"
+         alt="<?php if (isset($alt)) { echo $alt; } ?>"
+    />
+    <?php endif ?>
+<?php endif ?>
