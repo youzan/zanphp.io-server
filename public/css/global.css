@@ -1584,7 +1584,9 @@ img {
     font-size: 0.75rem;
     line-height: 0.75rem; }
   .copyright a.youzan-logo {
-    display: inline-block; }
+    display: inline-block;
+    width: 6.375rem;
+    height: 2.75rem; }
 
 .ft {
   background-color: #F9F9F9;
