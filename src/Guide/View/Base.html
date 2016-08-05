@@ -1,0 +1,27 @@
+<?php $layout->extend('common/tpl/base'); ?>
+
+<?php $layout->block('page_style'); ?>
+<?php $css->load('css/page.css', true);?>
+<?php $layout->endBlock();?>
+
+<?php $layout->block('main'); ?>
+<div class="main">
+    <div class="container">
+        <header class="hd">
+            <h1 class="logo"><a href="<?php echo URL::site('/', 'base'); ?>">Zan</a></h1>
+            <?php $tpl->load('common/widget/main_nav'); ?>
+        </header>
+        <div class="row">
+            <?php $tpl->load('guide/widget/side_nav'); ?>
+            <div class="col-md-9 article-container">
+                <?php $layout->place('article'); ?>
+            </div>
+        </div>
+    </div>
+    <div class="ft">
+        <?php $tpl->load('common/widget/footer'); ?>
+    </div>
+</div>
+<?php $layout->endBlock();?>
+
+
