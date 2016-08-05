@@ -1,0 +1,56 @@
+<?php $layout->extend('guide/base'); ?>
+
+<?php $layout->block('article'); ?>
+<article>
+    <header class="article-title">
+        <h1>脚手架工具 zan-installer</h1>
+    </header>
+    <section class="article-content">
+        <div class="article-paragraph">
+            <p>ZanPHP 提供一个官方命令行工具 zan-installer，可用于快速初始化项目目录。zan-installer提供了交互式的初始化方式，方便你快速设置应用名、项目路径、命名空间等配置。</p>
+        </div>
+        <div class="article-paragraph">
+            <p>
+                <i class="circle-tag">1</i>
+                <span class="tag tag-inverse tag-lg"># composer global require youzan/zan-installer</span>
+            </p>
+        </div>
+        <div class="article-paragraph">
+            <p>
+                <i class="circle-tag">2</i>
+                <span class="tag tag-inverse tag-lg"># zan</span>
+            </p>
+            <figure>
+                <?php $tpl->load('common/widget/retina_image', [
+                    'alt' => 'zan-installer',
+                    'pic' => [
+                        'zan-installer-shell.png',
+                        'zan-installer-shell@2x.png',
+                    ]
+                ]); ?>
+            </figure>
+        </div>
+        <div class="article-paragraph">
+            <p>
+                <i class="circle-tag">3</i>
+                <span class="tag tag-inverse tag-lg"># php bin/httpd</span>
+            </p>
+        </div>
+        <div class="article-paragraph">
+            <p>
+                <i class="circle-tag">4</i>
+                <span class="tag tag-inverse tag-lg">立即打开浏览器访问吧！</span>
+            </p>
+            <figure>
+                <?php $tpl->load('common/widget/retina_image', [
+                'alt' => 'hello world',
+                'pic' => [
+                    'zan-hello-world.png',
+                    'zan-hello-world@2x.png',
+                ]
+                ]); ?>
+            </figure>
+        </div>
+    </section>
+</article>
+<?php $layout->endBlock();?>
