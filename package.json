@@ -1,0 +1,60 @@
+{
+  "name": "zanphp.io",
+  "homepage": "http://zanphp.io/",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "gulp build",
+    "watch": "gulp watch",
+    "archive": "gulp archive",
+    "authors": "git log --format='%aN <%aE>' | sort -u > AUTHORS"
+  },
+  "zan-configs": {
+    "directories": {
+      "src": "src",
+      "sass": "public/scss",
+      "css": "public/css",
+      "js": "public/js",
+      "img": "public/img",
+      "test": "public/test"
+    }
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "devDependencies": {
+    "@alrra/travis-scripts": "^2.1.0",
+    "apache-server-configs": "2.14.0",
+    "archiver": "^0.21.0",
+    "babel-core": "^6.7.2",
+    "babel-preset-es2015": "^6.6.0",
+    "del": "^2.0.2",
+    "glob": "^7.0.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-header": "^1.2.2",
+    "gulp-jscs": "^3.0.1",
+    "gulp-jshint": "^2.0.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-replace": "^0.5.3",
+    "gulp-sass": "^2.3.2",
+    "jquery": "1.12.2",
+    "jshint": "^2.8.0",
+    "jshint-stylish": "^2.0.1",
+    "mocha": "^2.2.4",
+    "normalize.css": "3.0.3",
+    "run-sequence": "^1.0.2",
+    "travis-after-all": "^1.4.4"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/youzan/zanphp.io/blob/master/LICENSE"
+  },
+  "private": true
+}
