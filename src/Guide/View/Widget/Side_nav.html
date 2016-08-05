@@ -1,0 +1,8 @@
+<aside class="col-md-3 side-nav">
+    <h3>快速上手</h3>
+    <ul>
+        <li class="<?php if ('/guide' == $queryPath) { echo 'active'; } ?>"><a href="<?php echo URL::site('/guide', 'base');?>">基础环境</a></li>
+        <li class="<?php if(preg_match('/^\s*\/guide\/cli$/', $queryPath)) { echo 'active'; } ?>"><a href="<?php echo URL::site('/guide/cli', 'base');?>">脚手架工具 zan-installer</a></li>
+        <li class="<?php if(preg_match('/^\s*\/guide\/config$/', $queryPath)) { echo 'active'; } ?>"><a href="<?php echo URL::site('/guide/config', 'base');?>">Config 配置</a></li>
+    </ul>
+</aside>
