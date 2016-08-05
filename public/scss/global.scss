@@ -1,0 +1,81 @@
+@import "variables";
+@import "mixins";
+@import "normalize";
+@import "reboot";
+@import "grid";
+@import "tags";
+@import "buttons";
+html {
+    // Sets a specific default `font-size` for user with `rem` type scales.
+    font-size: $font-size-root;
+    -ms-overflow-style: scrollbar;
+    // Changes the default tap highlight to be completely transparent in iOS.
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $body-color;
+    background-color: $body-bg;
+}
+
+// Remove top margins from headings
+//
+// By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top
+// margin for easier control within type scales as it avoids margin collapsing.
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+
+img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.for-weixin {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.first-screen {
+    min-height: 618px;
+    height: 100vh;
+    max-height: 768px;
+}
+
+.copyright {
+    color: $gray-light;
+    margin-top: 4rem;
+    font-size: 0.75rem;
+    p {
+        margin: 0.625rem 0 0;
+        font-size: $font-size-xs;
+        line-height: $font-size-xs;
+    }
+    a.youzan-logo {
+        display: inline-block;
+    }
+}
+
+.ft {
+    background-color: $gray-lightest;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    .copyright {
+        margin: 0 auto;
+    }
+}

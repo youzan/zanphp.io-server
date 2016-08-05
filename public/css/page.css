@@ -1,0 +1,132 @@
+.hd {
+  position: relative;
+  padding: 2.5rem 0;
+  margin-bottom: 0.625rem; }
+  .hd::after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.logo {
+  float: left;
+  width: 3.75rem;
+  height: 3.75rem;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  background: url("../img/zan-logo.svg") center center no-repeat;
+  background-size: 100%; }
+  .logo > a {
+    display: block;
+    width: 100%;
+    height: 100%; }
+
+.main-nav {
+  float: right; }
+  .main-nav ul {
+    margin: 1.125rem 0;
+    padding: 0;
+    text-align: center; }
+    .main-nav ul > li {
+      display: inline-block;
+      margin: 0 0 0 30px;
+      list-style: none; }
+      .main-nav ul > li.active a {
+        color: #33A5ED; }
+      .main-nav ul > li a {
+        color: #969696;
+        text-decoration: none;
+        -webkit-transition: color .2s linear;
+        transition: color .2s linear; }
+        .main-nav ul > li a:hover {
+          color: #33A5ED; }
+
+.container {
+  min-height: 100vh; }
+
+.side-nav {
+  margin-bottom: 2rem; }
+  .side-nav h2 {
+    margin-bottom: 1rem; }
+  .side-nav a {
+    color: #666666;
+    text-decoration: none;
+    -webkit-transition: color .2s linear;
+    transition: color .2s linear; }
+    .side-nav a:hover {
+      color: #33A5ED; }
+  .side-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 0.5rem;
+    font-size: 0.875rem;
+    line-height: 2rem; }
+    .side-nav ul > li.active a {
+      color: #33A5ED; }
+
+.article-container {
+  margin-bottom: 3rem; }
+  .article-container article {
+    margin-bottom: 3rem; }
+
+.article-title h1 {
+  font-family: -apple-system-headline2, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.75rem;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+  font-weight: normal; }
+
+.circle-tag {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  text-align: center;
+  color: #fff;
+  font-style: normal;
+  background-color: #969696;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.article-content {
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+  color: #666666; }
+  .article-content .tag {
+    font-size: 0.75rem;
+    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    color: #DDEDFC;
+    letter-spacing: -1px; }
+  .article-content .circle-tag + .tag {
+    margin-left: 0.25rem; }
+  .article-content .article-paragraph {
+    margin-bottom: 2rem; }
+  .article-content figure {
+    margin-left: 1.5rem; }
+
+@media (min-width: 376px) {
+  .logo {
+    width: 4.75rem;
+    height: 4.75rem; }
+  .main-nav ul {
+    margin: 1.625rem 0; }
+  .circle-tag {
+    width: 1.75rem;
+    height: 1.75rem;
+    line-height: 1.75rem; }
+  .article-content .tag {
+    letter-spacing: 0px; }
+  .article-content .circle-tag + .tag {
+    margin-left: 1rem; }
+  .article-content figure {
+    margin-left: 2.75rem; } }

@@ -1,0 +1,165 @@
+.hd {
+  padding-top: 2rem;
+  margin-bottom: 1.75rem; }
+
+.main-nav ul {
+  margin: 0;
+  padding: 0;
+  text-align: center; }
+  .main-nav ul > li {
+    display: inline-block;
+    margin: 0 15px;
+    list-style: none; }
+    .main-nav ul > li a {
+      color: #969696;
+      text-decoration: none;
+      -webkit-transition: color .2s linear;
+      transition: color .2s linear; }
+      .main-nav ul > li a:hover {
+        color: #33A5ED; }
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  line-height: 1.75rem; }
+
+.section-content {
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 2rem;
+  color: #969696; }
+
+.intro {
+  text-align: center;
+  padding-bottom: 40px; }
+  .intro h1.logo {
+    font-size: 0;
+    margin: 0 auto;
+    text-align: center; }
+    .intro h1.logo > a {
+      display: inline-block;
+      width: 18.75rem;
+      height: 18.75rem; }
+    .intro h1.logo svg {
+      width: 100%;
+      height: 100%; }
+  .intro h2 {
+    font-size: 2.25rem;
+    line-height: 1;
+    letter-spacing: -1.24px;
+    font-family: -apple-system-headline2, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0.875rem; }
+  .intro .desc {
+    font-family: -apple-system-subheadline1, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: normal;
+    font-size: 1rem;
+    margin: 0 0 2.5rem;
+    line-height: 1.375rem;
+    color: #666666; }
+  .intro .btn {
+    border-radius: 100rem;
+    -webkit-transition: background-color .1s linear;
+    transition: background-color .1s linear; }
+    .intro .btn.btn-primary {
+      padding: 0.75rem 2rem;
+      font-size: 0.875rem;
+      line-height: 0.875rem; }
+    .intro .btn.btn-secondary {
+      font-size: 0;
+      padding: 0.625rem;
+      line-height: 0.875rem;
+      font-size: 0.875rem; }
+      .intro .btn.btn-secondary svg,
+      .intro .btn.btn-secondary span {
+        vertical-align: middle; }
+  .intro .btn + .btn {
+    margin-left: 0.5rem; }
+
+.endorse,
+.features,
+.about-youzan {
+  padding-top: 46px;
+  padding-bottom: 40px;
+  text-align: center; }
+
+.endorse,
+.about-youzan {
+  background-color: #F9F9F9; }
+
+.endorse {
+  padding-bottom: 0; }
+  .endorse .desc {
+    font-family: -apple-system-subheadline1, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: normal;
+    font-size: 1rem;
+    margin: 0 0 2.5rem;
+    line-height: 1.375rem;
+    color: #969696; }
+  .endorse figure {
+    margin: 0 30px;
+    text-align: center; }
+  .endorse img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%; }
+
+.features .section-title {
+  margin-bottom: 1.25rem; }
+
+.features .section-content {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 580px;
+  padding: 0 1rem; }
+  .features .section-content > ul {
+    line-height: 2rem; }
+
+.about-youzan .section-title {
+  margin-bottom: 1.25rem; }
+
+.about-youzan .section-content {
+  text-align: justify;
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 560px; }
+
+.intro .logo #php {
+  -webkit-transform: scale(0.0001);
+  -ms-transform: scale(0.0001);
+  transform: scale(0.0001); }
+
+.intro .logo .line {
+  -webkit-animation: .4s line ease forwards;
+  animation: .4s line ease forwards;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  opacity: 0; }
+
+.intro .logo .line:nth-child(2n) {
+  -webkit-animation: .5s line ease .2s forwards;
+  animation: .5s line ease .2s forwards; }
+
+@-webkit-keyframes line {
+  0% {
+    -webkit-transform: scale(0.5, 1);
+    transform: scale(0.5, 1);
+    opacity: 0; }
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 1; } }
+
+@keyframes line {
+  0% {
+    -webkit-transform: scale(0.5, 1);
+    transform: scale(0.5, 1);
+    opacity: 0; }
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 1; } }

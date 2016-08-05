@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="76px" height="76px" viewBox="0 0 76 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>zan-logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="zan-logo">
+            <g>
+                <g id="background" fill="#303030">
+                    <path d="M38,76 C58.9868205,76 76,58.9868205 76,38 C76,17.0131795 58.9868205,0 38,0 C17.0131795,0 0,17.0131795 0,38 C0,58.9868205 17.0131795,76 38,76 Z M38,73 C57.3299662,73 73,57.3299662 73,38 C73,18.6700338 57.3299662,3 38,3 C18.6700338,3 3,18.6700338 3,38 C3,57.3299662 18.6700338,73 38,73 Z" id="ring"></path>
+                    <path d="M38,70 C55.673112,70 70,55.673112 70,38 C70,20.326888 55.673112,6 38,6 C20.326888,6 6,20.326888 6,38 C6,55.673112 20.326888,70 38,70 Z" class="circle"></path>
+                </g>
+                <g id="z" transform="translate(22.000000, 22.000000)" stroke-linecap="round" stroke-width="2">
+                    <g id="—" transform="translate(0.000000, 24.000000)">
+                        <path d="M2,1 L8,1" class="line" stroke="#FAB477"></path>
+                        <path d="M12,1 L15,1" class="line" stroke="#FFA49F"></path>
+                        <path d="M19,1 L30,1" class="line" stroke="#33A5ED"></path>
+                        <path d="M6,4 L16,4" class="line" stroke="#33A5ED"></path>
+                        <path d="M2,7 L8,7" class="line" stroke="#A8E281"></path>
+                        <path d="M12,7 L15,7" class="line" stroke="#F7DF8B"></path>
+                        <path d="M0,4 L2,4" class="line" stroke="#DDEDFC"></path>
+                        <path d="M26,7 L30,7" class="line" stroke="#FFA49F"></path>
+                        <path d="M20,4 L32,4" class="line" stroke="#A8E281"></path>
+                        <path d="M19,7 L22,7" class="line" stroke="#DDEDFC"></path>
+                    </g>
+                    <g id="／" transform="translate(5.000000, 7.620103)">
+                        <path d="M11,8.37989672 L16,8.37989672" class="line" stroke="#DDEDFC"></path>
+                        <path d="M9,5.37989672 L19,5.37989672" class="line" stroke="#33A5ED"></path>
+                        <path d="M12,2.37989672 L16,2.37989672" class="line" stroke="#A8E281"></path>
+                        <path d="M19,2.37989672 L22.0000001,2.37989672" class="line" stroke="#FAB477"></path>
+                        <path d="M6,8.37989672 L7,8.37989672" class="line" stroke="#FFA49F"></path>
+                        <path d="M0,14.3798967 L5,14.3798967" class="line" stroke="#33A5ED"></path>
+                        <path d="M9,14.3798967 L10,14.3798967" class="line" stroke="#DDEDFC"></path>
+                        <path d="M3,11.3798967 L5,11.3798967" class="line" stroke="#A8E281"></path>
+                        <path d="M9,11.3798967 L13,11.3798967" class="line" stroke="#F7DF8B"></path>
+                    </g>
+                    <g id="—">
+                        <path d="M2,1 L9,1" class="line" stroke="#33A5ED"></path>
+                        <path d="M13,1 L17,1" class="line" stroke="#A8E281"></path>
+                        <path d="M21,1 L30,1" class="line" stroke="#F7DF8B"></path>
+                        <path d="M0,4 L10,4" class="line" stroke="#FAB477"></path>
+                        <path d="M2,7 L14,7" class="line" stroke="#A8E281"></path>
+                        <path d="M14,4 L17,4" class="line" stroke="#FFA49F"></path>
+                        <path d="M25,7 L30,7" class="line" stroke="#FFA49F"></path>
+                        <path d="M21,4 L32.0000003,4" class="line" stroke="#33A5ED"></path>
+                        <path d="M18,7 L21.3333333,7" class="line" stroke="#DDEDFC"></path>
+                    </g>
+                </g>
+                <g id="php" transform="translate(55.8701, 2.12994)">
+                    <path d="M9,18 C13.9705627,18 18,13.9705627 18,9 C18,4.02943725 13.9705627,0 9,0 C4.02943725,0 0,4.02943725 0,9 C0,13.9705627 4.02943725,18 9,18 Z" class="circle" fill="#33A5ED"></path>
+                    <path d="M3.75927734,6.77246094 L3.75927734,11 L4.51513672,11 L4.51513672,9.61425781 L5.43212891,9.61425781 C6.28759766,9.61425781 6.88525391,9.04003906 6.88525391,8.20214844 C6.88525391,7.34960938 6.30810547,6.77246094 5.46435547,6.77246094 L3.75927734,6.77246094 Z M4.51513672,7.40527344 L5.26513672,7.40527344 C5.81005859,7.40527344 6.11767578,7.68359375 6.11767578,8.20214844 C6.11767578,8.70605469 5.80126953,8.98730469 5.26220703,8.98730469 L4.51513672,8.98730469 L4.51513672,7.40527344 Z M11.2827148,11 L11.2827148,6.77246094 L10.5297852,6.77246094 L10.5297852,8.52148438 L8.47314453,8.52148438 L8.47314453,6.77246094 L7.71728516,6.77246094 L7.71728516,11 L8.47314453,11 L8.47314453,9.17480469 L10.5297852,9.17480469 L10.5297852,11 L11.2827148,11 Z M12.3256836,6.77246094 L12.3256836,11 L13.081543,11 L13.081543,9.61425781 L13.9985352,9.61425781 C14.8540039,9.61425781 15.4516602,9.04003906 15.4516602,8.20214844 C15.4516602,7.34960938 14.8745117,6.77246094 14.0307617,6.77246094 L12.3256836,6.77246094 Z M13.081543,7.40527344 L13.831543,7.40527344 C14.3764648,7.40527344 14.684082,7.68359375 14.684082,8.20214844 C14.684082,8.70605469 14.3676758,8.98730469 13.8286133,8.98730469 L13.081543,8.98730469 L13.081543,7.40527344 Z" fill="#DDEDFC"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
