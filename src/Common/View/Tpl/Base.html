@@ -7,16 +7,19 @@
    /    | | |  | |     |  | |
   o---o o-o-o  o o     o  o o
 -->
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="<?php echo URL::site('favicon.ico', 'static');?>"/>
-    <link rel="apple-touch-icon" href="<?php echo URL::site('img/apple-touch-icon.png', 'img');?>">
 
-    <!--<title><?php $layout->place('title'); ?></title>-->
-    <?php $tpl->load('common/widget/page_title'); ?>
+    <link rel="shortcut icon" href="<?php echo URL::site('favicon.ico', 'static');?>"/>
+    <link rel="apple-touch-icon" href="<?php echo URL::site('apple-touch-icon.png', 'static');?>">
+
+    <?php $layout->block('title'); ?>
+        <?php $tpl->load('common/widget/page_title'); ?>
+    <?php $layout->endBlock();?>
 
     <?php $tpl->load('common/widget/common_style'); ?>
 
@@ -30,7 +33,7 @@
 
     <?php $tpl->load('common/tpl/weixin_share'); ?>
 
-    <?php $layout->place('body'); ?>
+    <?php $layout->place('main'); ?>
 
     <?php $tpl->load('common/widget/vendor_script'); ?>
 
