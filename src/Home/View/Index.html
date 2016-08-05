@@ -1,0 +1,78 @@
+<?php $layout->extend('common/tpl/base'); ?>
+
+<?php $layout->block('page_style'); ?>
+<?php $css->load('css/home.css', true);?>
+<?php $layout->endBlock();?>
+
+<?php $layout->block('main'); ?>
+<div class="main">
+    <div class="first-screen">
+        <header class="hd">
+            <?php $tpl->load('common/widget/main_nav'); ?>
+        </header>
+        <section class="intro">
+            <h1 class="logo">
+                <a href="<?php echo URL::site('/', 'base'); ?>">
+                    <?php $tpl->load('home/widget/logo'); ?>
+                </a>
+            </h1>
+            <h2 class="brand">Zan PHP Framework</h2>
+            <p class="desc">
+                提供最简单的方式开发面向C10K+的
+                <br />高并发HTTP服务或SOA服务
+            </p>
+            <p>
+                <a href="<?php echo URL::site('/guide', 'base'); ?>" class="btn btn-primary">快速上手</a>
+                <a href="https://github.com/youzan/zan" class="btn btn-secondary">
+                    <svg aria-hidden="true" class="octicon octicon-mark-github" width="18" height="18" version="1.1" viewBox="0 0 16 16">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                    </svg>
+                    <span>Star</span>
+                </a>
+            </p>
+        </section>
+    </div>
+    <section class="endorse">
+        <h2 class="section-title">有赞亿级页面访问量的验证</h2>
+        <p class="desc">3万笔/秒交易处理速度</p>
+        <div class="section-content">
+            <figure>
+                <?php $tpl->load('common/widget/retina_image', [
+                'alt' => 'youzan intro',
+                'pic' => [
+                    'youzan-intro.png',
+                    'youzan-intro@2x.png',
+                ]
+                ]); ?>
+            </figure>
+        </div>
+    </section>
+    <section class="features">
+        <h2 class="section-title">核心特性</h2>
+        <div class="section-content">
+            <ul>
+                <li>基于 yield 实现了独立堆栈的协程</li>
+                <li>类似于 Golang 的并发编程模型实现</li>
+                <li>基于 swoole 提供非阻塞I/O服务</li>
+                <li>连接池支持（内置MySQL、Redis、syslog等多种组件）</li>
+                <li>类似 Golang 的defer机制解决由于异常导致的资源未释放、锁未释放的问题</li>
+                <li>可继承的View布局及组件化支持，方便完成bigPipe/bigRender/首屏加载优化等不同的渲染方式</li>
+                <li>基于模型驱动的SQLMap，实现了SQL的快速定位及方便的sharding、cache支持</li>
+                <li>提供类似于 Laravel 的middleware(Filters &amp; Terminators)机制</li>
+                <li>Di及单元测试的良好支持</li>
+                <li>良好的服务化对接支持</li>
+            </ul>
+        </div>
+    </section>
+    <section class="about-youzan">
+        <h2 class="section-title">关于有赞</h2>
+        <div class="section-content">
+            2012年11月27号，有赞由杭州起码科技有限公司在贝塔咖啡孵化。
+            <br />3 年来有赞扎根移动电商，专注为各类大小企业提供日益完善的产品服务，同时竭力为平台所有消费者提供更好的消费体验和购物保障。从最初的一个在线营销和企业展示工具，到现在的全套移动电商产品服务方案，有赞希望能助力更多商家在移动电商时代拔得头筹！
+        </div>
+        <?php $tpl->load('common/widget/footer'); ?>
+    </section>
+</div>
+<?php $layout->endBlock();?>
+
+
