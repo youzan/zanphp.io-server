@@ -14,7 +14,7 @@
         }
     ],
     "require": {
-        "zanphp/zan": "dev-hotfix/zan_url_config_fix_20160802"
+        "zanphp/zan": "dev-master"
     },
     "autoload": {
         "psr-4": {
