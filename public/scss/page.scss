@@ -96,7 +96,7 @@
 .article {
   h1 {
     font-family: -apple-system-headline2, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-size: 1.75rem;
+    font-size: 1.875rem;
     line-height: 2rem;
     margin-bottom: 1rem;
     font-weight: normal;
@@ -136,6 +136,8 @@
   font-size: $font-size-sm;
   line-height: $font-size-sm*2;
   color: $gray;
+  word-wrap: break-word;
+  word-break: normal;
   .tag {
     font-size: $font-size-xs;
     font-family: $font-family-monospace;

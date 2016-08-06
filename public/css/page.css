@@ -51,8 +51,9 @@
 
 .side-nav {
   margin-bottom: 2rem; }
-  .side-nav h2 {
-    margin-bottom: 1rem; }
+  .side-nav h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem; }
   .side-nav a {
     color: #666666;
     text-decoration: none;
@@ -76,14 +77,18 @@
 
 .article h1 {
   font-family: -apple-system-headline2, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.75rem;
+  font-size: 1.875rem;
   line-height: 2rem;
   margin-bottom: 1rem;
   font-weight: normal; }
 
 .article h2 {
   font-weight: normal;
-  margin-bottom: 0.875rem; }
+  margin-bottom: 0.875rem;
+  font-size: 1.5rem; }
+
+.article h3 {
+  font-size: 1.25rem; }
 
 .article p {
   margin-bottom: 0.5rem; }
@@ -108,7 +113,9 @@
 .article-content {
   font-size: 0.875rem;
   line-height: 1.75rem;
-  color: #666666; }
+  color: #666666;
+  word-wrap: break-word;
+  word-break: normal; }
   .article-content .tag {
     font-size: 0.75rem;
     font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
