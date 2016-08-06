@@ -71,15 +71,22 @@
 
 .article-container {
   margin-bottom: 3rem; }
-  .article-container article {
+  .article-container .article {
     margin-bottom: 3rem; }
 
-.article-title h1 {
+.article h1 {
   font-family: -apple-system-headline2, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1.75rem;
   line-height: 2rem;
   margin-bottom: 1rem;
   font-weight: normal; }
+
+.article h2 {
+  font-weight: normal;
+  margin-bottom: 0.875rem; }
+
+.article p {
+  margin-bottom: 0.5rem; }
 
 .circle-tag {
   display: inline-block;
@@ -105,12 +112,11 @@
   .article-content .tag {
     font-size: 0.75rem;
     font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    color: #DDEDFC;
     letter-spacing: -1px; }
   .article-content .circle-tag + .tag {
     margin-left: 0.25rem; }
   .article-content .article-paragraph {
-    margin-bottom: 2rem; }
+    margin-bottom: 2.25rem; }
   .article-content figure {
     margin-left: 1.5rem; }
 
@@ -125,7 +131,7 @@
     height: 1.75rem;
     line-height: 1.75rem; }
   .article-content .tag {
-    letter-spacing: 0px; }
+    letter-spacing: 1px; }
   .article-content .circle-tag + .tag {
     margin-left: 1rem; }
   .article-content figure {

@@ -87,12 +87,12 @@
 
 .article-container {
   margin-bottom: 3rem;
-  article {
+  .article {
     margin-bottom: 3rem;
   }
 }
 
-.article-title {
+.article {
   h1 {
     font-family: -apple-system-headline2, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 1.75rem;
@@ -100,6 +100,16 @@
     margin-bottom: 1rem;
     font-weight: normal;
   }
+  h2 {
+    font-weight: normal;
+    margin-bottom: 0.875rem;
+  }
+  p {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.article-title {
 }
 
 .circle-tag {
@@ -124,14 +134,13 @@
   .tag {
     font-size: $font-size-xs;
     font-family: $font-family-monospace;
-    color: $brand-info;
     letter-spacing: -1px;
   }
   .circle-tag + .tag {
     margin-left: 0.25rem;
   }
   .article-paragraph {
-    margin-bottom: 2rem;
+    margin-bottom: 2.25rem;
   }
   figure {
     margin-left: 1.5rem;
@@ -155,7 +164,7 @@
   }
   .article-content {
     .tag {
-      letter-spacing: 0px;
+      letter-spacing: 1px;
     }
     .circle-tag + .tag {
       margin-left: 1rem;
