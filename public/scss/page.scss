@@ -58,8 +58,9 @@
 
 .side-nav {
   margin-bottom: 2rem;
-  h2 {
-    margin-bottom: 1rem;
+  h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
   }
   a {
     color: $gray;
@@ -103,6 +104,10 @@
   h2 {
     font-weight: normal;
     margin-bottom: 0.875rem;
+    font-size: $font-size-h4;
+  }
+  h3 {
+    font-size: $font-size-h5;
   }
   p {
     margin-bottom: 0.5rem;
