@@ -9,42 +9,35 @@
 namespace Com\Youzan\ZanPhpIo\Git\Service;
 
 
-use Zan\Framework\Foundation\Core\Config;
-use Zan\Framework\Foundation\Exception\System\InvalidArgumentException;
-
 class HooksService
 {
     private $config;
+    private $srcPath;
     private $buildPath;
     private $distPath;
     private $backupPath;
 
     /**
      * HooksService constructor.
+     * @param $config
      */
-    public function __construct()
+    public function __construct($config)
     {
-        $this->config = Config::get('hooks.doc');
+        $this->config = $config;
     }
 
-    private function validSecret($secret)
+    public function updateDoc()
     {
-        return ($secret === $this->config['secret']);
-    }
+        $oldPath = getcwd();
 
-    public function updateDoc($secret)
-    {
-        if (!$this->validSecret($secret)) {
-            throw new InvalidArgumentException('invalid secret');
-        }
-
+        $this->srcPath = $this->config['src'];
         $this->buildPath = $this->getDirectory($this->config['build']);
         $this->distPath = $this->getDirectory($this->config['dist']);
         $this->backupPath = $this->getDirectory($this->config['backup']);
 
-        $oldPath = getcwd();
-        $shellPath = $this->config['src'];
-        chdir($shellPath);
+        chdir($this->srcPath);
+
+        $this->update();
 
         $this->build();
 
@@ -66,10 +59,15 @@ class HooksService
         return $dir;
     }
 
+    private function update()
+    {
+        exec("git --work-tree={$this->srcPath} pull -f");
+    }
+
     private function build()
     {
         $output = shell_exec($this->config['shell']);
-        echo $output;
+        var_dump($output);
     }
 
     private function backup()
