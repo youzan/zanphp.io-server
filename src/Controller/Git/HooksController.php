@@ -43,10 +43,11 @@ class HooksController extends Controller
 
     private function validate()
     {
-        $signature = @$_SERVER['HTTP_X_HUB_SIGNATURE'];
-        $event = @$_SERVER['HTTP_X_GITHUB_EVENT'];
-        $delivery = @$_SERVER['HTTP_X_GITHUB_DELIVERY'];
-        $payload = file_get_contents('php://input');
+        $headers = $this->request->headers;
+        $signature = $headers->get('x-hub-signature');
+        $event = $headers->get('x-github-event');
+        $delivery = $headers->get('x-github-delivery');
+        $payload = $this->request->getContent();
 
         if (!isset($signature, $event, $delivery)) {
             return false;

@@ -72,7 +72,7 @@ class HooksService
 
     private function backup()
     {
-        $backupPath = $this->backupPath . '/' . date("YmdH:i:s");
+        $backupPath = $this->backupPath . '/' . date("YmdHis");
         rename($this->distPath, $backupPath);
     }
 
