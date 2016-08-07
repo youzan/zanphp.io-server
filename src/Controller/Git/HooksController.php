@@ -11,7 +11,7 @@ namespace Com\Youzan\ZanPhpIo\Controller\Git;
 
 
 use Com\Youzan\ZanPhpIo\Controller\Base\BaseController as Controller;
-use Com\Youzan\ZanPhpIo\Service\HooksService;
+use Com\Youzan\ZanPhpIo\Git\Service\HooksService;
 
 class HooksController extends Controller
 {

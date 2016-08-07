@@ -6,7 +6,7 @@
  * Time: 3:13 PM
  */
 
-namespace Com\Youzan\ZanPhpIo\Service;
+namespace Com\Youzan\ZanPhpIo\Git\Service;
 
 
 use Zan\Framework\Foundation\Core\Config;
