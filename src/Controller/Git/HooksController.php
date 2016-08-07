@@ -17,9 +17,11 @@ class HooksController extends Controller
 {
     public function updateDoc()
     {
+        $hookParams = $this->request->post('hook');
+        $secret = $hookParams['config']['secret'];
         $service = new HooksService();
         try {
-            yield $service->updateDoc();
+            yield $service->updateDoc($secret);
         } catch (\RuntimeException $e) {
             yield $this->r(10001, 'update doc failed', null);
         }

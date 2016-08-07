@@ -10,6 +10,7 @@ namespace Com\Youzan\ZanPhpIo\Git\Service;
 
 
 use Zan\Framework\Foundation\Core\Config;
+use Zan\Framework\Foundation\Exception\System\InvalidArgumentException;
 
 class HooksService
 {
@@ -18,12 +19,28 @@ class HooksService
     private $distPath;
     private $backupPath;
 
-    public function updateDoc()
+    /**
+     * HooksService constructor.
+     */
+    public function __construct()
     {
         $this->config = Config::get('hooks.doc');
-        $this->buildPath =  $this->getDirectory($this->config['build']);
-        $this->distPath =  $this->getDirectory($this->config['dist']);
-        $this->backupPath =  $this->getDirectory($this->config['backup']);
+    }
+
+    private function validSecret($secret)
+    {
+        return ($secret === $this->config['secret']);
+    }
+
+    public function updateDoc($secret)
+    {
+        if (!$this->validSecret($secret)) {
+            throw new InvalidArgumentException('invalid secret');
+        }
+
+        $this->buildPath = $this->getDirectory($this->config['build']);
+        $this->distPath = $this->getDirectory($this->config['dist']);
+        $this->backupPath = $this->getDirectory($this->config['backup']);
 
         $oldPath = getcwd();
         $shellPath = $this->config['src'];
@@ -36,6 +53,8 @@ class HooksService
         $this->publish();
 
         chdir($oldPath);
+
+        yield 1;
     }
 
     private function getDirectory($dir)
@@ -49,7 +68,8 @@ class HooksService
 
     private function build()
     {
-        shell_exec($this->config['shell']);
+        $output = shell_exec($this->config['shell']);
+        echo $output;
     }
 
     private function backup()
