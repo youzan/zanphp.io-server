@@ -12,5 +12,7 @@ return [
         'build'  => '/srv/www/zanphp.io/zan-doc/_book',
         'dist'   => '/srv/www/zanphp.io/doc/',
         'backup' => '/srv/www/zanphp.io/_backup',
+        'log'    => '/srv/www/zanphp.io/logs/doc.update.log',
+        'pid'    => '/srv/www/zanphp.io/pid',
     ]
 ];

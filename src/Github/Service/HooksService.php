@@ -31,6 +31,8 @@ class HooksService
         $this->buildPath = $this->getDirectory($this->config['build']);
         $this->distPath = $this->getDirectory($this->config['dist']);
         $this->backupPath = $this->getDirectory($this->config['backup']);
+        $this->output = $this->config['output'];
+        $this->pid = $this->config['pid'];
     }
 
     private function getCmd()
@@ -43,7 +45,8 @@ class HooksService
             "mv {$this->distPath} {$backupPath}",
             "mv {$this->buildPath} {$this->distPath}",
         ];
-        return join('&&', $cmd);
+        $result = join(' && ', $cmd);
+        return $result;
     }
 
     public function updateDoc()
