@@ -49,7 +49,7 @@ class HooksService
     public function updateDoc()
     {
         $cmd = $this->getCmd();
-        if ($this->isRunning($this->pid)) {
+        if ($this->pid && $this->isRunning($this->pid)) {
             yield null;
             return;
         }
