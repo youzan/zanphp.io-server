@@ -12,6 +12,5 @@ return [
         'build'  => '/srv/www/zanphp.io/zan-doc/_book',
         'dist'   => '/srv/www/zanphp.io/doc/',
         'backup' => '/srv/www/zanphp.io/_backup',
-        'shell'  => 'gitbook build'
     ]
 ];

@@ -7,11 +7,11 @@
  * Time: 7:59 PM
  */
 
-namespace Com\Youzan\ZanPhpIo\Controller\Git;
+namespace Com\Youzan\ZanPhpIo\Controller\Github;
 
 
 use Com\Youzan\ZanPhpIo\Controller\Base\BaseController as Controller;
-use Com\Youzan\ZanPhpIo\Git\Service\HooksService;
+use Com\Youzan\ZanPhpIo\Github\Service\HooksService;
 use Zan\Framework\Foundation\Core\Config;
 
 class HooksController extends Controller
