@@ -9,8 +9,9 @@
 
 namespace Com\Youzan\ZanPhpIo\Middleware;
 
-use Zan\Framework\Contract\Network\RequestFilter;
 use Zan\Framework\Contract\Network\Request;
+use Zan\Framework\Contract\Network\RequestFilter;
+use Zan\Framework\Foundation\Core\Config;
 use Zan\Framework\Utilities\DesignPattern\Context;
 
 class GithubFilter implements RequestFilter
@@ -38,7 +39,7 @@ class GithubFilter implements RequestFilter
     {
         $data = [
             'code' => $code,
-            'msg'  => $msg,
+            'msg' => $msg,
             'data' => $data,
         ];
         return new JsonResponse($data);

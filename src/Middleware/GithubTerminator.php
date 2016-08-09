@@ -13,6 +13,7 @@ namespace Com\Youzan\ZanPhpIo\Middleware;
 use Zan\Framework\Contract\Network\Request;
 use Zan\Framework\Contract\Network\RequestTerminator;
 use Zan\Framework\Contract\Network\Response;
+use Zan\Framework\Foundation\Core\Config;
 use Zan\Framework\Utilities\DesignPattern\Context;
 
 class GithubTerminator implements RequestTerminator
