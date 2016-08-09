@@ -1,15 +1,21 @@
 <?php
+
 /**
  * Created by IntelliJ IDEA.
  * User: nuomi
- * Date: 8/7/16
- * Time: 3:13 PM
+ * Date: 8/9/16
+ * Time: 1:33 PM
  */
 
-namespace Com\Youzan\ZanPhpIo\Github\Service;
+namespace Com\Youzan\ZanPhpIo\Middleware;
 
 
-class HooksService
+use Zan\Framework\Contract\Network\Request;
+use Zan\Framework\Contract\Network\RequestTerminator;
+use Zan\Framework\Contract\Network\Response;
+use Zan\Framework\Utilities\DesignPattern\Context;
+
+class GithubTerminator implements RequestTerminator
 {
     private $config;
     private $srcPath;
@@ -19,13 +25,9 @@ class HooksService
     private $output;
     private $pid;
 
-    /**
-     * HooksService constructor.
-     * @param $config
-     */
-    public function __construct($config)
+    public function __construct()
     {
-        $this->config = $config;
+        $this->config = Config::get('hooks.doc');
 
         $this->srcPath = $this->config['src'];
         $this->buildPath = $this->getDirectory($this->config['build']);
@@ -33,6 +35,11 @@ class HooksService
         $this->backupPath = $this->getDirectory($this->config['backup']);
         $this->output = $this->config['output'];
         $this->pid = $this->config['pid'];
+    }
+
+    public function terminate(Request $request, Response $response, Context $context)
+    {
+        yield $this->updateDoc();
     }
 
     private function getCmd()
@@ -50,7 +57,7 @@ class HooksService
         return $result;
     }
 
-    public function updateDoc()
+    private function updateDoc()
     {
         $cmd = $this->getCmd();
         if ($this->isRunning($this->pid)) {
@@ -58,7 +65,6 @@ class HooksService
             return;
         }
         exec($cmd);
-        yield $this->output;
     }
 
     private function isRunning($pid)
@@ -83,5 +89,4 @@ class HooksService
         }
         return $dir;
     }
-
 }
