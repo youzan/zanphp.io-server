@@ -73,6 +73,8 @@ class GithubTerminator implements RequestTerminator
         $this->locker->lock();
         exec($cmd);
         $this->locker->unlock();
+
+        yield null;
     }
 
     private function isRunning()
