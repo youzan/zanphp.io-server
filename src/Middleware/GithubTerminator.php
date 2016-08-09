@@ -15,6 +15,7 @@ use Zan\Framework\Contract\Network\RequestTerminator;
 use Zan\Framework\Contract\Network\Response;
 use Zan\Framework\Foundation\Core\Config;
 use Zan\Framework\Utilities\DesignPattern\Context;
+use Zan\Framework\Utilities\Locker\ApcuLocker;
 
 class GithubTerminator implements RequestTerminator
 {
@@ -25,6 +26,7 @@ class GithubTerminator implements RequestTerminator
     private $backupPath;
     private $output;
     private $pid;
+    private $locker;
 
     public function __construct()
     {
@@ -36,6 +38,8 @@ class GithubTerminator implements RequestTerminator
         $this->backupPath = $this->getDirectory($this->config['backup']);
         $this->output = $this->config['output'];
         $this->pid = $this->config['pid'];
+
+        $this->locker = new ApcuLocker();
     }
 
     public function terminate(Request $request, Response $response, Context $context)
@@ -60,26 +64,20 @@ class GithubTerminator implements RequestTerminator
 
     private function updateDoc()
     {
-        $cmd = $this->getCmd();
-        if ($this->isRunning($this->pid)) {
+        if ($this->isRunning()) {
             yield null;
             return;
         }
+
+        $cmd = $this->getCmd();
+        $this->locker->lock();
         exec($cmd);
+        $this->locker->unlock();
     }
 
-    private function isRunning($pid)
+    private function isRunning()
     {
-        try {
-            $result = shell_exec(sprintf("ps %d", $pid));
-            if (count(preg_split("/\n/", $result)) > 2) {
-                return true;
-            }
-        } catch (Exception $e) {
-
-        }
-
-        return false;
+        return $this->locker->isLocked();
     }
 
     private function getDirectory($dir)

@@ -12,6 +12,7 @@ namespace Com\Youzan\ZanPhpIo\Middleware;
 use Zan\Framework\Contract\Network\Request;
 use Zan\Framework\Contract\Network\RequestFilter;
 use Zan\Framework\Foundation\Core\Config;
+use Zan\Framework\Network\Http\Response\JsonResponse;
 use Zan\Framework\Utilities\DesignPattern\Context;
 
 class GithubFilter implements RequestFilter
@@ -28,7 +29,7 @@ class GithubFilter implements RequestFilter
 
     public function doFilter(Request $request, Context $context)
     {
-        if (!$this->validate()) {
+        if (!$this->validate($request)) {
             yield $this->r(10001, 'invalid secret!', null);
             return;
         }
