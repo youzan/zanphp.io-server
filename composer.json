@@ -14,7 +14,7 @@
         }
     ],
     "require": {
-        "zanphp/zan": "dev-feature/zan_add_apcu_locker"
+        "zanphp/zan": "dev-master"
     },
     "autoload": {
         "psr-4": {
