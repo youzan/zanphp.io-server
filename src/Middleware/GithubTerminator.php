@@ -39,7 +39,7 @@ class GithubTerminator implements RequestTerminator
         $this->output = $this->config['output'];
         $this->pid = $this->config['pid'];
 
-        $this->locker = new ApcuLocker();
+        $this->locker = new ApcuLocker('update_doc');
     }
 
     public function terminate(Request $request, Response $response, Context $context)
