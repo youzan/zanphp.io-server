@@ -14,6 +14,6 @@ return [
         ],
     ],
     'match'     => [
-        ['^github\/updateDoc', 'github_doc'],
+        ['^github/.*', 'github_doc'],
     ],
 ];
