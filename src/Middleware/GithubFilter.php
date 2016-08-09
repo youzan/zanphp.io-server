@@ -25,6 +25,7 @@ class GithubFilter implements RequestFilter
     public function __construct()
     {
         $this->config = Config::get('hooks.doc');
+        $this->secret = $this->config['secret'];
     }
 
     public function doFilter(Request $request, Context $context)
