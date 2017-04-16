@@ -1,9 +1,10 @@
 <nav class="main-nav">
     <ul>
-        <li class="<?php if (preg_match('/^\s*\/guide\//', $queryPath)) { echo 'active'; } ?>"><a href="<?php echo URL::site('/guide', 'base'); ?>">入门</a></li>
+        <li class="<?php if (preg_match('/^\s*\/guide\/*/', $queryPath)) { echo 'active'; } ?>"><a href="<?php echo URL::site('/guide', 'base'); ?>">入门</a></li>
         <li><a href="<?php echo URL::site('/zh/', 'doc'); ?>">文档</a></li>
         <li><a href="https://github.com/youzan/zan">源码</a></li>
         <li><a href="http://tech.youzan.com/tag/zanphp">博客</a></li>
         <li><a href="https://github.com/youzan/zan/issues">社区</a></li>
+        <li class="<?php if (preg_match('/^\s*\/donate\/*/', $queryPath)) { echo 'active'; } ?>"><a href="<?php echo URL::site('/donate', 'base'); ?>">捐赠</a></li>
     </ul>
 </nav>
