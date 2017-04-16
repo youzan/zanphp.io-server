@@ -31,6 +31,7 @@
     margin: 1.125rem 0;
     padding: 0;
     text-align: center;
+    font-size: 0.875rem;
     & > li {
       display: inline-block;
       margin: 0 0 0 30px;
@@ -152,6 +153,10 @@
   figure {
     margin-left: 1.5rem;
   }
+  .donate-qr {
+    max-width: 20rem;
+    max-height: 20rem;
+  }
 }
 
 @media (min-width: 376px) {
@@ -162,6 +167,7 @@
   .main-nav {
     ul {
       margin: 1.625rem 0;
+      font-size: 1rem;
     }
   }
   .circle-tag {

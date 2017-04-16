@@ -31,7 +31,8 @@
   .main-nav ul {
     margin: 1.125rem 0;
     padding: 0;
-    text-align: center; }
+    text-align: center;
+    font-size: 0.875rem; }
     .main-nav ul > li {
       display: inline-block;
       margin: 0 0 0 30px;
@@ -41,7 +42,6 @@
       .main-nav ul > li a {
         color: #969696;
         text-decoration: none;
-        -webkit-transition: color .2s linear;
         transition: color .2s linear; }
         .main-nav ul > li a:hover {
           color: #33A5ED; }
@@ -57,7 +57,6 @@
   .side-nav a {
     color: #666666;
     text-decoration: none;
-    -webkit-transition: color .2s linear;
     transition: color .2s linear; }
     .side-nav a:hover {
       color: #33A5ED; }
@@ -126,13 +125,17 @@
     margin-bottom: 2.25rem; }
   .article-content figure {
     margin-left: 1.5rem; }
+  .article-content .donate-qr {
+    max-width: 20rem;
+    max-height: 20rem; }
 
 @media (min-width: 376px) {
   .logo {
     width: 4.75rem;
     height: 4.75rem; }
   .main-nav ul {
-    margin: 1.625rem 0; }
+    margin: 1.625rem 0;
+    font-size: 1rem; }
   .circle-tag {
     width: 1.75rem;
     height: 1.75rem;
