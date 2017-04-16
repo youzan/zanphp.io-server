@@ -60,17 +60,27 @@
         </div>
         <div class="article-paragraph">
             <h2>运行</h2>
-            <p>HTTP 版本请启动项目根路径下的 httpd 后，访问 <a href="http://127.0.0.1:8030">http://127.0.0.1:8030</a> 查看输出结果吧！</p>
+            <p>HTTP 版本请启动项目根路径下的 httpd 后，访问 <a href="http://127.0.0.1:9588">http://127.0.0.1:9588</a> 查看输出结果吧！</p>
             <p>
                 <span class="tag tag-inverse tag-lg">php bin/httpd</span>
             </p>
             <p>
-                当然你也可以使用 <a href="https://httpd.apache.org/" target="_blank">Apache</a> / <a href="http://nginx.org/" target="_blank">nginx</a> / <a href="http://tengine.taobao.org/" target="_blank">tengine</a> 设置反向代理后使用域名访问，以下是 zanphp.io 的 nginx 配置：<br />
+                当然你也可以使用 <a href="https://httpd.apache.org/" target="_blank">Apache</a> / <a href="http://nginx.org/" target="_blank">nginx</a> / <a href="http://tengine.taobao.org/" target="_blank">tengine</a>
+                设置反向代理后使用域名访问，以下是 zanphp.io 的 nginx 配置：<br />
                 <a href="https://gist.github.com/agalwood/df9c7316d7e41a363c6fcc8e7907e54c" target="_blank">https://gist.github.com/agalwood/df9c7316d7e41a363c6fcc8e7907e54c</a>
                 <script src="https://gist.github.com/agalwood/df9c7316d7e41a363c6fcc8e7907e54c.js"></script>
             </p>
         </div>
-
+        <div class="article-paragraph">
+            <h2>静态资源</h2>
+            <p>
+                您可以使用任一主流的HTTP服务器 <a href="https://httpd.apache.org/" target="_blank">Apache</a> / <a href="http://nginx.org/" target="_blank">nginx</a> / <a href="http://tengine.taobao.org/" target="_blank">tengine</a> 配置静态资源服务器
+                <br />
+                zanphp.io 的静态资源域名为 s.zanphp.io「可在项目 /resource/config/{env}/url.php 里修改」，以下是 nginx 配置供大家参考：<br />
+                <a href="https://gist.github.com/agalwood/497f1d49a3e97b271193fb48d17263e3" target="_blank">https://gist.github.com/agalwood/497f1d49a3e97b271193fb48d17263e3</a>
+                <script src="https://gist.github.com/agalwood/497f1d49a3e97b271193fb48d17263e3.js"></script>
+            </p>
+        </div>
     </section>
 </article>
 <?php $layout->endBlock();?>
