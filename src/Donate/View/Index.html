@@ -1,0 +1,46 @@
+<?php $layout->extend('common/tpl/base'); ?>
+
+<?php $layout->block('page_style'); ?>
+<?php $css->load('css/page.css', true);?>
+<?php $layout->endBlock();?>
+
+<?php $layout->block('main'); ?>
+<div class="main">
+    <div class="container">
+        <header class="hd">
+            <h1 class="logo"><a href="<?php echo URL::site('/', 'base'); ?>">Zan</a></h1>
+            <?php $tpl->load('common/widget/main_nav'); ?>
+        </header>
+        <div class="row">
+            <div class="col-md-12 article-container">
+                <article class="article">
+                    <header class="article-title">
+                        <h1>捐赠我们</h1>
+                    </header>
+                    <section class="article-content">
+                        <div class="article-paragraph">
+                            <p>感谢您对 Zan 以及我们其他开源项目的支持，我们会不断努力做出更好的开源产品。我们成立了专项账户来接收您的捐赠。</p>
+                            <p>  您的捐赠将被用于：Zan 及其他开源项目的社区建设和维护，包括官网服务器、域名、QQ群扩建等。</p>
+                        </div>
+                        <div class="article-paragraph row">
+                            <div class="col-md-6">
+                                <div class="donate-qr">
+                                    <img src="<?php echo URL::site('img/donate-qr-5.png', 'static');?>" alt="donate zan 5 rmb" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="donate-qr">
+                                    <img src="<?php echo URL::site('img/donate-qr-20.png', 'static');?>" alt="donate zan 20 rmb" />
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+            </div>
+        </div>
+    </div>
+    <div class="ft">
+        <?php $tpl->load('common/widget/footer'); ?>
+    </div>
+</div>
+<?php $layout->endBlock();?>
