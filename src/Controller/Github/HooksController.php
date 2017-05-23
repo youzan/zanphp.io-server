@@ -20,4 +20,14 @@ class HooksController extends Controller
         yield $this->r(0, 'success', null);
     }
 
+    public function updateZanPhpDoc()
+    {
+        yield $this->r(0, 'success', null);
+    }
+
+    public function updateZanDoc()
+    {
+        yield $this->r(0, 'success', null);
+    }
+
 }
