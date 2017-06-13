@@ -29,8 +29,6 @@ class ZanDocTerminator extends AbstractGithubTerminator {
         $this->cmd = [
             "cd {$this->srcPath}",
             "git --work-tree={$this->srcPath} pull -f",
-            "make clean",
-            "make html",
             "mv {$this->distPath} {$backupPath}",
             "mv {$this->buildPath}/* {$this->distPath}",
         ];
