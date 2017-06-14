@@ -51,6 +51,7 @@ abstract class AbstractGithubTerminator implements RequestTerminator
 
         $cmd = $this->getCmd();
         $this->locker->lock();
+        echo date("Y-m-d H:i:s")."\t".$cmd, "\n";
         exec($cmd);
         $this->locker->unlock();
 
