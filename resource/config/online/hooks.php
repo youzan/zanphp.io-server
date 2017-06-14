@@ -18,7 +18,7 @@ return [
     'ZanDoc' => [
         'secret' => '2X2u3PxaoX2dJbCb',
         'src'    => '/var/www/zanphp.io/zan-doc/',
-        'build'  => '/var/www/zanphp.io/zan-doc/html',
+        'build'  => '/var/www/zanphp.io/zan-doc/build',
         'dist'   => '/var/www/zanphp.io/zan-html/',
         'backup' => '/var/www/zanphp.io/zan_backup',
         'output' => '/var/www/zanphp.io/logs/zan_doc.update.log',
