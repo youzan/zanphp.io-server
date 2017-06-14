@@ -7,6 +7,7 @@
  */
 return [
     'ZanPhpDoc' => [
+        'repo'   => 'https://github.com/youzan/zanphp-doc.git',
         'secret' => '2X2u3PxaoX2dJbCb',
         'src'    => '/var/www/zanphp.io/zanphp-doc/',
         'build'  => '/var/www/zanphp.io/zanphp-doc/build/html',
@@ -16,6 +17,7 @@ return [
         'pid'    => '/var/www/zanphp.io/zanphp_pid',
     ],
     'ZanDoc' => [
+        'repo'   => 'https://github.com/youzan/zan-doc.git',
         'secret' => '2X2u3PxaoX2dJbCb',
         'src'    => '/var/www/zanphp.io/zan-doc/',
         'build'  => '/var/www/zanphp.io/zan-doc/build',

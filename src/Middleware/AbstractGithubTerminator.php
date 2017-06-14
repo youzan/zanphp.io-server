@@ -17,6 +17,7 @@ use Zan\Framework\Utilities\DesignPattern\Context;
 
 abstract class AbstractGithubTerminator implements RequestTerminator
 {
+    protected $repo;
     protected $srcPath;
     protected $buildPath;
     protected $distPath;

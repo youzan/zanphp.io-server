@@ -16,6 +16,7 @@ class ZanDocTerminator extends AbstractGithubTerminator {
     function __construct() {
         $config = Config::get('hooks.ZanDoc');
 
+        $this->repo = $config['repo'];
         $this->srcPath = $config['src'];
         $this->buildPath = $this->getDirectory($config['build']);
         $this->distPath = $this->getDirectory($config['dist']);
@@ -25,10 +26,12 @@ class ZanDocTerminator extends AbstractGithubTerminator {
 
         $this->locker = new ApcuLocker('update_ZanDoc');
 
+        $srcDir = dirname($this->srcPath);
         $backupPath = $this->backupPath . '/' . date("YmdHis");
         $this->cmd = [
-            "cd {$this->srcPath}",
-            "git --work-tree={$this->srcPath} pull -f",
+            "rm -rf {$this->srcPath}",
+            "cd $srcDir",
+            "git clone {$this->repo}",
             "mv {$this->distPath} {$backupPath}",
             "mv {$this->buildPath}/* {$this->distPath}",
         ];
