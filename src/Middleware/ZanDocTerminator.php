@@ -33,6 +33,7 @@ class ZanDocTerminator extends AbstractGithubTerminator {
             "cd $srcDir",
             "git clone {$this->repo}",
             "mv {$this->distPath} {$backupPath}",
+            "mkdir {$this->distPath}",
             "mv {$this->buildPath}/* {$this->distPath}",
         ];
     }

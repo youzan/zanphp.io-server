@@ -36,6 +36,7 @@ class ZanPhpDocTerminator extends AbstractGithubTerminator {
             "make clean",
             "make html",
             "mv {$this->distPath} {$backupPath}",
+            "mkdir {$this->distPath}",
             "mv {$this->buildPath} {$this->distPath}",
         ];
     }
