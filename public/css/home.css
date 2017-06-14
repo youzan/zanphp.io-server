@@ -2,20 +2,36 @@
   padding-top: 2rem;
   margin-bottom: 1.75rem; }
 
+.first-screen {
+  min-height: 768px !important; }
+
+.desc-detail {
+  display: inline-block; }
+
+@media only screen and (min-width: 900px) {
+  .sep {
+    display: inline-block;
+    width: 1px;
+    height: 200px;
+    background-color: lightgray;
+    margin: 0 20px;
+    position: relative;
+    top: 40px; } }
+
 .main-nav ul {
   margin: 0;
   padding: 0;
   text-align: center; }
-  .main-nav ul > li {
-    display: inline-block;
-    margin: 0 15px;
-    list-style: none; }
-    .main-nav ul > li a {
-      color: #969696;
-      text-decoration: none;
-      transition: color .2s linear; }
-      .main-nav ul > li a:hover {
-        color: #33A5ED; }
+.main-nav ul > li {
+  display: inline-block;
+  margin: 0 15px;
+  list-style: none; }
+.main-nav ul > li a {
+  color: #969696;
+  text-decoration: none;
+  transition: color .2s linear; }
+.main-nav ul > li a:hover {
+  color: #33A5ED; }
 
 .section-title {
   font-size: 1.75rem;
@@ -32,49 +48,49 @@
 .intro {
   text-align: center;
   padding-bottom: 40px; }
-  .intro h1.logo {
-    font-size: 0;
-    margin: 0 auto;
-    text-align: center; }
-    .intro h1.logo > a {
-      display: inline-block;
-      width: 18.75rem;
-      height: 18.75rem; }
-    .intro h1.logo svg {
-      width: 100%;
-      height: 100%; }
-  .intro h2 {
-    font-size: 2.25rem;
-    line-height: 1;
-    letter-spacing: -1.24px;
-    font-family: -apple-system-headline2, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-weight: normal;
-    margin-top: 0;
-    margin-bottom: 0.875rem; }
-  .intro .desc {
-    font-family: -apple-system-subheadline1, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-weight: normal;
-    font-size: 1rem;
-    margin: 0 0 2.5rem;
-    line-height: 1.375rem;
-    color: #666666; }
-  .intro .btn {
-    border-radius: 100rem;
-    transition: background-color .1s linear; }
-    .intro .btn.btn-primary {
-      padding: 0.75rem 2rem;
-      font-size: 0.875rem;
-      line-height: 0.875rem; }
-    .intro .btn.btn-secondary {
-      font-size: 0;
-      padding: 0.625rem;
-      line-height: 0.875rem;
-      font-size: 0.875rem; }
-      .intro .btn.btn-secondary svg,
-      .intro .btn.btn-secondary span {
-        vertical-align: middle; }
-  .intro .btn + .btn {
-    margin-left: 0.5rem; }
+.intro h1.logo {
+  font-size: 0;
+  margin: 0 auto;
+  text-align: center; }
+.intro h1.logo > a {
+  display: inline-block;
+  width: 18.75rem;
+  height: 18.75rem; }
+.intro h1.logo svg {
+  width: 100%;
+  height: 100%; }
+.intro h2 {
+  font-size: 2.25rem;
+  line-height: 1;
+  letter-spacing: -1.24px;
+  font-family: -apple-system-headline2, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 0.875rem; }
+.intro .desc {
+  font-family: -apple-system-subheadline1, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  margin: 0 0 2.5rem;
+  line-height: 1.375rem;
+  color: #666666; }
+.intro .btn {
+  border-radius: 100rem;
+  transition: background-color .1s linear; }
+.intro .btn.btn-primary {
+  padding: 0.75rem 2rem;
+  font-size: 0.875rem;
+  line-height: 0.875rem; }
+.intro .btn.btn-secondary {
+  font-size: 0;
+  padding: 0.625rem;
+  line-height: 0.875rem;
+  font-size: 0.875rem; }
+.intro .btn.btn-secondary svg,
+.intro .btn.btn-secondary span {
+  vertical-align: middle; }
+.intro .btn + .btn {
+  margin-left: 0.5rem; }
 
 .endorse,
 .features,
@@ -89,21 +105,21 @@
 
 .endorse {
   padding-bottom: 0; }
-  .endorse .desc {
-    font-family: -apple-system-subheadline1, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-weight: normal;
-    font-size: 1rem;
-    margin: 0 0 2.5rem;
-    line-height: 1.375rem;
-    color: #969696; }
-  .endorse figure {
-    margin: 0 30px;
-    text-align: center; }
-  .endorse img {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%; }
+.endorse .desc {
+  font-family: -apple-system-subheadline1, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  margin: 0 0 2.5rem;
+  line-height: 1.375rem;
+  color: #969696; }
+.endorse figure {
+  margin: 0 30px;
+  text-align: center; }
+.endorse img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%; }
 
 .features .section-title {
   margin-bottom: 1.25rem; }
@@ -113,8 +129,8 @@
   margin: 0 auto;
   max-width: 580px;
   padding: 0 1rem; }
-  .features .section-content > ul {
-    line-height: 2rem; }
+.features .section-content > ul {
+  line-height: 2rem; }
 
 .about-youzan .section-title {
   margin-bottom: 1.25rem; }
