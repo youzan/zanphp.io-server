@@ -7,15 +7,15 @@
     </header>
     <section class="article-content">
         <div class="article-paragraph">
-            <p>Zan PHP Framework (简称Zan) 仅能运行在 Mac OS、Linux 操作系统上，依赖的
-                <a href="http://www.swoole.com/" target="_blank">Swoole</a> 扩展
+            <p>Zan PHP Framework (简称ZanPHP) 仅能运行在 Mac OS、Linux 操作系统上，依赖的
+                <a href="https://github.com/youzan/zan" target="_blank">Zan</a> 扩展
                 需要 gcc 或 clang 编译器支持。
             </p>
         </div>
         <div class="article-paragraph">
             <h2>PHP 版本</h2>
             <p>
-                Zan 仅支持PHP 5.6或更高版本，Swoole 在 PHP 7下可以运行，但不稳定，不建议使用 PHP 7。建议安装 <a href="https://pecl.php.net/package/APCu">APCu</a> 扩展。
+                ZanPHP 仅支持PHP 5.6或更高版本,需要安装的扩展包括<a href="https://github.com/youzan/zan">Zan</a>,<a href="https://pecl.php.net/package/APCu">APCu</a>,<a href="https://github.com/kjdev/php-ext-lz4.git">lz4</a>。
             </p>
             <p>
                 Mac OS 推荐使用 <a href="http://brew.sh/">Homebrew</a> 安装 PHP，<a href="https://www.centos.org/" target="_blank">CentOS</a>或
@@ -24,43 +24,43 @@
             </p>
         </div>
         <div class="article-paragraph">
-            <h2>Swoole 扩展</h2>
-            <p>Swoole 扩展是按照 PHP 标准扩展构建的。使用 <code>phpize</code> 来生成 PHP 编译配置，<code>./configure</code> 来做编译配置检测，<code>make</code> 进行编译，<code>make install</code>进行安装。Swoole 安装流程详见：<a href="http://wiki.swoole.com/wiki/page/6.html" target="_blank">http://wiki.swoole.com/wiki/page/6.html</a></p>
+            <h2>Zan 扩展</h2>
+            <p>Zan 扩展是按照 PHP 标准扩展构建的。使用 <code>phpize</code> 来生成 PHP 编译配置，<code>./configure</code> 来做编译配置检测，<code>make</code> 进行编译，<code>make install</code>进行安装。Zan 安装流程详见：<a href="http://wiki.swoole.com/wiki/page/6.html" target="_blank">http://wiki.swoole.com/wiki/page/6.html</a></p>
             <p>
                 Zan 基于 <a href="https://github.com/swoole/swoole-src/releases/tag/swoole-1.8.5-stable">swoole-1.8.5-stable</a>
-                版本构建，<strong>因 Swoole 更高版本 MySQL Query API 大幅变更，请勿使用更高版本。</strong>
+                版本构建，<strong>在swoole的基础上新增了许多功能特性,修复了大量bug,接口更加友好易用。</strong>
             </p>
             <p>
-                Zan 建议的 Swoole configure 参数：<br/>
-                <kbd>./configure --enable-async-mysql --enable-async-httpclient --enable-sockets --enable-async-redis</kbd>
+                Zan 建议的 configure 参数：<br/>
+                <kbd>./configure --enable-sockets  --enable-async-redis --enable-openssl</kbd>
             </p>
             <p>
                 编译安装成功后，修改php.ini加入：
             </p>
             <p>
-                <span class="tag tag-inverse tag-lg">extension=swoole.so</span>
+                <span class="tag tag-inverse tag-lg">extension=zan.so</span>
             </p>
         </div>
         <div class="article-paragraph">
             <h2>Composer</h2>
             <p>
-                Zan 的依赖包使用 <a href="http://getcomposer.org/" target="_blank">Composer</a> 进行管理，请确保您已经安装了 Composer。
+                ZanPHP 的依赖包使用 <a href="http://getcomposer.org/" target="_blank">Composer</a> 进行管理，请确保您已经安装了 Composer。
             </p>
             <p>
                 如果你是使用 <a href="https://github.com/youzan/zan-installer" target="_blank">zan-installer</a> 初始化的项目，zan-installer 会自动帮你 <code>composer update</code>。
-                在开发使用过程中，你可能需要使用 <code>composer update</code> 更新 Zan 的代码，来获取 Zan 的新特性和 Bug 修复。
+                在开发使用过程中，你可能需要使用 <code>composer update</code> 更新 ZanPHP 的代码，来获取 ZanPHP 的新特性和 Bug 修复。
             </p>
         </div>
         <div class="article-paragraph">
             <h2>php.ini</h2>
             <p>你需要配置 PHP 的 php.ini 文件来设置 Zan 的运行模式。</p>
             <p>
-                <span class="tag tag-inverse tag-lg">zan.RUN_MODE = test</span>
+                <span class="tag tag-inverse tag-lg">zanphp.RUN_MODE = test</span>
             </p>
         </div>
         <div class="article-paragraph">
             <h2>运行</h2>
-            <p>HTTP 版本请启动项目根路径下的 httpd 后，访问 <a href="http://127.0.0.1:9588">http://127.0.0.1:9588</a> 查看输出结果吧！</p>
+            <p>HTTP 版本请启动项目根路径下的 httpd 后，访问 <a href="http://127.0.0.1:9588">http://127.0.0.1:8030</a> 查看输出结果吧！</p>
             <p>
                 <span class="tag tag-inverse tag-lg">php bin/httpd</span>
             </p>

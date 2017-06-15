@@ -12,45 +12,73 @@
         <div class="article-paragraph">
             <p>
                 <i class="circle-tag">1</i>
-                <span class="tag tag-inverse tag-lg"># composer global require youzan/zan-installer</span>
+                <span class="tag tag-inverse tag-lg"># git clone https://github.com/youzan/zan-installer.git</span>
+            </p>
+            <p>
+                <i class="circle-tag">2</i>
+                <span class="tag tag-inverse tag-lg"># cd zan-installer</span>
+            </p>
+            <p>
+                <i class="circle-tag">3</i>
+                <span class="tag tag-inverse tag-lg"># composer install</span>
             </p>
         </div>
         <div class="article-paragraph">
             <p>
-                <i class="circle-tag">2</i>
+                <i class="circle-tag">4</i>
                 <span class="tag tag-inverse tag-lg"># zan</span>
             </p>
             <figure>
                 <?php $tpl->load('common/widget/retina_image', [
                     'alt' => 'zan-installer',
                     'pic' => [
-                        'zan-installer-shell.png',
-                        'zan-installer-shell@2x.png',
+                        'zan-installer-shell@3x.png',
                     ]
                 ]); ?>
             </figure>
-        </div>
-        <div class="article-paragraph">
-            <p>
-                <i class="circle-tag">3</i>
-                <span class="tag tag-inverse tag-lg"># php bin/httpd</span>
-            </p>
-        </div>
-        <div class="article-paragraph">
-            <p>
-                <i class="circle-tag">4</i>
-                <span class="tag tag-inverse tag-lg">立即打开浏览器访问吧！</span>
-            </p>
             <figure>
                 <?php $tpl->load('common/widget/retina_image', [
-                'alt' => 'hello world',
+                'alt' => 'zan-installer',
                 'pic' => [
-                    'zan-hello-world.png',
-                    'zan-hello-world@2x.png',
+                'zan-installer-shell@4x.png',
                 ]
                 ]); ?>
             </figure>
         </div>
+        <div class="article-paragraph">
+            <p>
+                <i class="circle-tag">5</i>
+                <span class="tag tag-inverse tag-lg">TCP SERVER: # php bin/nova<br/><br/>HTTP SERVER: # php bin/httpd</span>
+            </p>
+        </div>
+        <div class="article-paragraph">
+            <p>
+                <i class="circle-tag">6</i>
+                <span class="tag tag-inverse tag-lg">立即打开浏览器访问HTTP SERVER吧！</span>
+            </p>
+            <figure>
+                <?php $tpl->load('common/widget/retina_image', [
+                'alt' => 'welcome',
+                'pic' => [
+                    'zan-welcome@2x.png',
+                ]
+                ]); ?>
+            </figure>
+            <p>
+                <i class="circle-tag">7</i>
+                <span class="tag tag-inverse tag-lg">NOVA RPC服务调用</span>
+            </p>
+            <figure>
+                <?php $tpl->load('common/widget/retina_image', [
+                'alt' => 'welcome',
+                'pic' => [
+                'zan-nova@2x.png',
+                ]
+                ]); ?>
+            </figure>
+        </div>
+
+
     </section>
 </article>
 <?php $layout->endBlock();?>
