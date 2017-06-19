@@ -25,14 +25,18 @@
         </div>
         <div class="article-paragraph">
             <h2>Zan 扩展</h2>
-            <p>Zan 扩展是按照 PHP 标准扩展构建的。使用 <code>phpize</code> 来生成 PHP 编译配置，<code>./configure</code> 来做编译配置检测，<code>make</code> 进行编译，<code>make install</code>进行安装。</p>
             <p>
                 Zan 基于 <a href="https://github.com/swoole/swoole-src/releases/tag/swoole-1.8.5-stable">swoole-1.8.5-stable</a>
                 版本构建，<strong>在swoole的基础上新增了许多功能特性,修复了大量bug,接口更加友好易用。</strong>
             </p>
             <p>
-                Zan 建议的 configure 参数：<br/>
-                <kbd>./configure --enable-sockets  --enable-async-redis --enable-openssl</kbd>
+                Zan 的安装命令为：<br/>
+                <kbd>git clone https://github.com/youzan/zan.git<br/>
+                    cd zan-extension<br/>
+                    phpize<br/>
+                    ./configure --enable-sockets --enable-async-redis  --enable-openssl<br/>
+                    make<br/>
+                    make install</kbd>
             </p>
             <p>
                 编译安装成功后，修改php.ini加入：
