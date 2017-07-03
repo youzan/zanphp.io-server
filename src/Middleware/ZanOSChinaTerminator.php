@@ -33,8 +33,8 @@ class ZanOSChinaTerminator extends AbstractGithubTerminator {
 
         $srcDir = dirname($this->srcPath);
 
-        if (!is_dir($srcDir))
-            mkdir($srcDir);
+        if (!is_dir($this->srcPath))
+            mkdir($this->srcPath, 0777, true);
 
         $backupPath = $this->backupPath . '/' . date("YmdHis");
         $this->cmd = [
