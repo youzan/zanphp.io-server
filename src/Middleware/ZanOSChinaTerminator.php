@@ -35,12 +35,13 @@ class ZanOSChinaTerminator extends AbstractGithubTerminator {
 
         if (!is_dir($srcDir))
             mkdir($srcDir);
-        
+
         $backupPath = $this->backupPath . '/' . date("YmdHis");
         $this->cmd = [
             "mv {$this->srcPath} {$backupPath}",
             "cd $srcDir",
             "git clone {$this->repo}",
+            "cd $repository",
             "git remote add gitoschina git@git.oschina.net:zan-group/$repository.git",
             "git push gitoschina -f"
         ];
