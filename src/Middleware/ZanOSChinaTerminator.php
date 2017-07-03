@@ -32,6 +32,10 @@ class ZanOSChinaTerminator extends AbstractGithubTerminator {
         $this->locker = new ApcuLocker("update_ZanOSChina_$repository");
 
         $srcDir = dirname($this->srcPath);
+
+        if (!is_dir($srcDir))
+            mkdir($srcDir);
+        
         $backupPath = $this->backupPath . '/' . date("YmdHis");
         $this->cmd = [
             "mv {$this->srcPath} {$backupPath}",
