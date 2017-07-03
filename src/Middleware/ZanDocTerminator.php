@@ -10,10 +10,11 @@ namespace Com\Youzan\ZanPhpIo\Middleware;
 
 use Com\Youzan\ZanPhpIo\Middleware\AbstractGithubTerminator;
 use Zan\Framework\Foundation\Core\Config;
+use Zan\Framework\Utilities\DesignPattern\Context;
 use Zan\Framework\Utilities\Locker\ApcuLocker;
 
 class ZanDocTerminator extends AbstractGithubTerminator {
-    function __construct() {
+    protected function init(Context $context) {
         $config = Config::get('hooks.ZanDoc');
 
         $this->repo = $config['repo'];

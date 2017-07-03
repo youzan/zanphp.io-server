@@ -26,4 +26,12 @@ return [
         'output' => '/var/www/zanphp.io/logs/zan_doc.update.log',
         'pid'    => '/var/www/zanphp.io/zan_pid',
     ],
+    'ZanOSChina' => [
+        'repo'   => 'https://github.com/youzan/{APPNAME}.git',
+        'secret' => '2X2u3PxaoX2dJbCb',
+        'src'    => '/var/www/zanphp.io/zan-oschina/{APPNAME}/',
+        'backup' => '/var/www/zanphp.io/zanoschina_backup/{APPNAME}/',
+        'output' => '/var/www/zanphp.io/logs/zanoschina_{APPNAME}.update.log',
+        'pid'    => '/var/www/zanphp.io/zanoschina_{APPNAME}_pid',
+    ]
 ];

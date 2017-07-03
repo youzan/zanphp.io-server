@@ -16,9 +16,14 @@ return [
             Com\Youzan\ZanPhpIo\Middleware\ZanDocFilter::class,
             Com\Youzan\ZanPhpIo\Middleware\ZanDocTerminator::class
         ],
+        'ZanOSChina' => [
+            Com\Youzan\ZanPhpIo\Middleware\ZanOSChinaFilter::class,
+            Com\Youzan\ZanPhpIo\Middleware\ZanOSChinaTerminator::class
+        ]
     ],
     'match'     => [
         ['^github/hooks/updateZanPhpDoc', 'ZanPhpDoc'],
         ['^github/hooks/updateZanDoc', 'ZanDoc'],
+        ['^github/hooks/*', 'ZanOSChina']
     ],
 ];

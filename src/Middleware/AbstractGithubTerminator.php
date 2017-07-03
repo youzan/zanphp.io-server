@@ -31,8 +31,11 @@ abstract class AbstractGithubTerminator implements RequestTerminator
      */
     protected $locker;
 
+    abstract protected function init(Context $context);
+
     public function terminate(Request $request, Response $response, Context $context)
     {
+        $this->init($context);
         yield $this->updateDoc();
     }
 
