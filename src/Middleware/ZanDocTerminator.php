@@ -33,6 +33,8 @@ class ZanDocTerminator extends AbstractGithubTerminator {
             "rm -rf {$this->srcPath}",
             "cd $srcDir",
             "git clone {$this->repo}",
+            "cd {$this->srcPath}",
+            "sh gen-doc.sh",
             "mv {$this->distPath} {$backupPath}",
             "mkdir {$this->distPath}",
             "mv {$this->buildPath}/* {$this->distPath}",
