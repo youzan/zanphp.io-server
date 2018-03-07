@@ -41,7 +41,7 @@
     "gulp-rename": "^1.2.0",
     "gulp-replace": "^0.5.3",
     "gulp-sass": "^2.3.2",
-    "jquery": "1.12.2",
+    "jquery": "^3.0.0",
     "jshint": "^2.8.0",
     "jshint-stylish": "^2.0.1",
     "mocha": "^2.2.4",
