@@ -6,6 +6,26 @@
   margin-bottom: 1.75rem;
 }
 
+.first-screen {
+  min-height: 768px !important;
+}
+
+.desc-detail {
+  display: inline-block;
+}
+
+@media only screen and (min-width: 900px){
+  .sep {
+    display: inline-block;
+    width: 1px;
+    height: 200px;
+    background-color: lightgray;
+    margin: 0 20px;
+    position: relative;
+    top: 40px;
+  }
+}
+
 .main-nav {
   ul {
     margin: 0;

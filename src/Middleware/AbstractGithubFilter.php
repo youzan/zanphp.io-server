@@ -15,18 +15,11 @@ use Zan\Framework\Foundation\Core\Config;
 use Zan\Framework\Network\Http\Response\JsonResponse;
 use Zan\Framework\Utilities\DesignPattern\Context;
 
-class GithubFilter implements RequestFilter
+class AbstractGithubFilter implements RequestFilter
 {
-    private $config;
-    private $secret;
+    protected $secret;
     private $event;
     private $delivery;
-
-    public function __construct()
-    {
-        $this->config = Config::get('hooks.doc');
-        $this->secret = $this->config['secret'];
-    }
 
     public function doFilter(Request $request, Context $context)
     {
